@@ -1,0 +1,3411 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://webSrv.atlasjetWS" xmlns:impl="http://webSrv.atlasjetWS" xmlns:intf="http://webSrv.atlasjetWS" xmlns:tns2="http://data.atlasjetWS" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsi="http://ws-i.org/profiles/basic/1.1/xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <wsdl:types>
+  
+  
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webSrv.atlasjetWS" xmlns:tns2="http://data.atlasjetWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+   <import namespace="http://data.atlasjetWS"/>
+   <element name="availabilityResponse">
+    <complexType>
+     <sequence>
+      <element name="availabilityReturn" nillable="true" type="tns2:AvailabilityData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="availabilityV3">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="direction" nillable="true" type="xsd:string"/>
+      <element name="origin" nillable="true" type="xsd:string"/>
+      <element name="destination" nillable="true" type="xsd:string"/>
+      <element name="date" nillable="true" type="xsd:string"/>
+      <element name="adult" type="xsd:int"/>
+      <element name="child" type="xsd:int"/>
+      <element name="inf" type="xsd:int"/>
+      <element name="ogr" type="xsd:int"/>
+      <element name="tsk" type="xsd:int"/>
+      <element name="yp" type="xsd:int"/>
+      <element name="sc" type="xsd:int"/>
+      <element name="triptype" nillable="true" type="xsd:string"/>
+      <element name="spetypeid" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="availabilityV3Response">
+    <complexType>
+     <sequence>
+      <element name="availabilityV3Return" nillable="true" type="tns2:AvailabilityData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="availabilityV4">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="direction" nillable="true" type="xsd:string"/>
+	  <element name="origin" nillable="true" type="xsd:string"/>
+	  <element name="destination" nillable="true" type="xsd:string"/>
+	  <element name="depdate" nillable="true" type="xsd:string"/>
+	  <element name="retdate" nillable="true" type="xsd:string"/>
+      <element name="adult" type="xsd:int"/>
+      <element name="child" type="xsd:int"/>
+      <element name="inf" type="xsd:int"/>
+      <element name="ogr" type="xsd:int"/>
+      <element name="tsk" type="xsd:int"/>
+      <element name="yp" type="xsd:int"/>
+      <element name="sc" type="xsd:int"/>
+      <element name="triptype" nillable="true" type="xsd:string"/>
+	  <element name="spetypeid" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="availabilityV4Response">
+    <complexType>
+     <sequence>
+      <element name="availabilityV4Return" nillable="true" type="tns2:AvailabilityData"/>
+     </sequence>
+    </complexType>
+   </element>   
+   <element name="availLowFare">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="direction" nillable="true" type="xsd:string"/>
+	  <element name="origin" nillable="true" type="xsd:string"/>
+	  <element name="destination" nillable="true" type="xsd:string"/>
+	  <element name="depdate" nillable="true" type="xsd:string"/>
+	  <element name="retdate" nillable="true" type="xsd:string"/>
+      <element name="adult" type="xsd:int"/>
+      <element name="child" type="xsd:int"/>
+      <element name="inf" type="xsd:int"/>
+      <element name="ogr" type="xsd:int"/>
+      <element name="tsk" type="xsd:int"/>
+      <element name="yp" type="xsd:int"/>
+      <element name="sc" type="xsd:int"/>
+	  <element name="spetypeid" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="availLowFareResponse">
+    <complexType>
+     <sequence>
+      <element name="availLowFareReturn" nillable="true" type="tns2:AvailLowFareData"/>
+     </sequence>
+    </complexType>
+   </element>      
+   
+   <element name="timetable">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="origin" nillable="true" type="xsd:string"/>
+      <element name="destination" nillable="true" type="xsd:string"/>
+      <element name="flightdate" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="timetableResponse">
+    <complexType>
+     <sequence>
+      <element name="timetableReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_TimeTableData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fares">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="direction" nillable="true" type="xsd:string"/>
+      <element name="depvoyagecode" nillable="true" type="xsd:string"/>
+      <element name="depclass" nillable="true" type="xsd:string"/>
+      <element name="retvoyagecode" nillable="true" type="xsd:string"/>
+      <element name="retclass" nillable="true" type="xsd:string"/>
+      <element name="adult" type="xsd:int"/>
+      <element name="child" type="xsd:int"/>
+      <element name="inf" type="xsd:int"/>
+      <element name="ogr" type="xsd:int"/>
+      <element name="tsk" type="xsd:int"/>
+      <element name="yp" type="xsd:int"/>
+      <element name="sc" type="xsd:int"/>
+	  <element name="spetypeid" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="faresResponse">
+    <complexType>
+     <sequence>
+      <element name="faresReturn" nillable="true" type="tns2:FareQuoteData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="cancelPnrPrice">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="pnrno" nillable="true" type="xsd:string"/>
+      <element name="lastname" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="cancelPnrPriceResponse">
+    <complexType>
+     <sequence>
+      <element name="cancelPnrPriceReturn" nillable="true" type="tns2:CancelPnrPriceData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="psgrForTicketNumber">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="locator" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="psgrForTicketNumberResponse">
+    <complexType>
+     <sequence>
+      <element name="psgrForTicketNumberReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_PsgrForTicketnumberData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addPassenger">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="direction" nillable="true" type="xsd:string"/>
+      <element name="depvoyagecode" nillable="true" type="xsd:string"/>
+      <element name="depclass" nillable="true" type="xsd:string"/>
+      <element name="retvoyagecode" nillable="true" type="xsd:string"/>
+      <element name="retclass" nillable="true" type="xsd:string"/>
+      <element name="passengers" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_PassengersData"/>
+	  <element name="spetypeid" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addPassengerResponse">
+    <complexType>
+     <sequence>
+      <element name="addPassengerReturn" nillable="true" type="tns2:ReferenceData"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+   <element name="pnrDivide">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="pnrnumber" nillable="true" type="xsd:string"/>
+      <element name="lastname" nillable="true" type="xsd:string"/>
+      <element name="passengers" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_PassengerIdData"/>
+     </sequence>
+    </complexType>
+   </element>   
+   
+   <element name="pnrDivideResponse">
+    <complexType>
+     <sequence>
+      <element name="pnrDivideReturn" nillable="true" type="tns2:PnrDivideData"/>
+     </sequence>
+    </complexType>
+   </element>
+      
+   <element name="cancelPnr">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="pnrno" nillable="true" type="xsd:string"/>
+      <element name="lastname" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="cancelPnrResponse">
+    <complexType>
+     <sequence>
+      <element name="cancelPnrReturn" nillable="true" type="tns2:CancelPnrData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="cancelPreBookingResponse">
+    <complexType>
+     <sequence>
+      <element name="cancelPreBookingReturn" nillable="true" type="tns2:CancelPreBookingData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="cancelPreBooking">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="pnrno" nillable="true" type="xsd:string"/>
+      <element name="lastname" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+   <element name="exchangeAvailability">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="ipaddress" nillable="true" type="xsd:string"/>
+      <element name="pnrnumber" nillable="true" type="xsd:string"/>
+      <element name="lastname" nillable="true" type="xsd:string"/>
+      <element name="currency" nillable="true" type="xsd:string"/>
+	  <element name="origin" nillable="true" type="xsd:string"/>
+	  <element name="destination" nillable="true" type="xsd:string"/>
+	  <element name="flightdate" nillable="true" type="xsd:string"/>
+	  <element name="processtype" nillable="true" type="xsd:string"/>
+	  <element name="flights" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_ExchangeFlightData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="exchangeAvailabilityResponse">
+    <complexType>
+     <sequence>
+      <element name="exchangeAvailabilityReturn" nillable="true" type="tns2:AvailabilityData"/>
+     </sequence>
+    </complexType>
+   </element>     
+
+   <element name="exchangeStartSession">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="ipaddress" nillable="true" type="xsd:string"/>
+      <element name="pnrnumber" nillable="true" type="xsd:string"/>
+      <element name="lastname" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="exchangeStartSessionResponse">
+    <complexType>
+     <sequence>
+      <element name="exchangeStartSessionReturn" nillable="true" type="tns2:ExchangeSessionData"/>
+     </sequence>
+    </complexType>
+   </element>
+
+   <element name="exchangeEndSession">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="ipaddress" nillable="true" type="xsd:string"/>
+      <element name="pnrnumber" nillable="true" type="xsd:string"/>
+      <element name="lastname" nillable="true" type="xsd:string"/>
+      <element name="sessionId" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="exchangeEndSessionResponse">
+    <complexType>
+     <sequence>
+      <element name="exchangeEndSessionReturn" nillable="true" type="tns2:ExchangeSessionData"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+   <element name="exchangeCharges">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="ipaddress" nillable="true" type="xsd:string"/>
+      <element name="currency" nillable="true" type="xsd:string"/>
+      <element name="pnrnumber" nillable="true" type="xsd:string"/>
+      <element name="lastname" nillable="true" type="xsd:string"/>
+      <element name="sessionId" nillable="true" type="xsd:string"/>
+      <element name="processtype" nillable="true" type="xsd:string"/>
+      <element name="flights" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_ExchangeFlight"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+   <element name="exchangeChargesResponse">
+    <complexType>
+     <sequence>
+      <element name="exchangeChargesReturn" nillable="true" type="tns2:ExchangeChargesData"/>
+     </sequence>
+    </complexType>
+   </element>   
+
+   <element name="doExchange">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="ipaddress" nillable="true" type="xsd:string"/>
+      <element name="pnrnumber" nillable="true" type="xsd:string"/>
+      <element name="lastname" nillable="true" type="xsd:string"/>
+      <element name="sessionId" nillable="true" type="xsd:string"/>
+      <element name="paytype" nillable="true" type="xsd:string"/>
+      <element name="ccNumber" nillable="true" type="xsd:string"/>
+      <element name="ccMonth" nillable="true" type="xsd:string"/>
+      <element name="ccYear" nillable="true" type="xsd:string"/>
+      <element name="ccCvv" nillable="true" type="xsd:string"/>
+      <element name="ccCheckName" nillable="true" type="xsd:string"/>
+      <element name="ccCardCode" nillable="true" type="xsd:string"/>
+      <element name="ccInstalment" nillable="true" type="xsd:string"/>
+      <element name="ccBankCode" nillable="true" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="doExchangeResponse">
+    <complexType>
+     <sequence>
+      <element name="doExchangeReturn" nillable="true" type="tns2:DoExchangeData"/>
+     </sequence>
+    </complexType>
+   </element>   
+   
+   
+   <element name="pnrAddSeat">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="pnrnumber" nillable="true" type="xsd:string"/>
+      <element name="lastname" nillable="true" type="xsd:string"/>
+      <element name="paytype" nillable="true" type="xsd:string"/>
+      <element name="ccNumber" nillable="true" type="xsd:string"/>
+      <element name="ccMonth" nillable="true" type="xsd:string"/>
+      <element name="ccYear" nillable="true" type="xsd:string"/>
+      <element name="ccCvv" nillable="true" type="xsd:string"/>
+      <element name="ccCheckName" nillable="true" type="xsd:string"/>
+      <element name="ccCardCode" nillable="true" type="xsd:string"/>
+      <element name="ccInstalment" nillable="true" type="xsd:string"/>
+      <element name="ccBankCode" nillable="true" type="xsd:long"/>
+      <element name="seatInfo" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_PnrAddSeatInfoData"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+   <element name="pnrAddSeatResponse">
+    <complexType>
+     <sequence>
+      <element name="pnrAddSeatReturn" nillable="true" type="tns2:PnrAddSeatData"/>
+     </sequence>
+    </complexType>
+   </element>      
+   
+
+   <element name="openJawAirportsList">
+    <complexType>
+     <sequence>
+      <element name="originCode" nillable="true" type="xsd:string"/>
+      <element name="destinationCode" nillable="true" type="xsd:string"/>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="openJawAirportsListResponse">
+    <complexType>
+     <sequence>
+      <element name="openJawAirportsListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_OpenJawAirportsData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="jetmilInfo">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="jetmilnumber" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="jetmilInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="jetmilInfoReturn" nillable="true" type="tns2:JetmilInfoData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="specialTypeList">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="specialTypeListResponse">
+    <complexType>
+     <sequence>
+      <element name="specialTypeListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_SpecialTypeListData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="ccList">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="ccsixdigit" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="ccListResponse">
+    <complexType>
+     <sequence>
+      <element name="ccListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_CreditCardListData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="campaignList">
+	<complexType>
+		<sequence>
+			<element name="username" nillable="true" type="xsd:string"/>
+			<element name="password" nillable="true" type="xsd:string"/>
+			<element name="lang" nillable="true" type="xsd:string"/>
+			<element name="referenceNumber" type="xsd:long"/>
+		</sequence>
+	 </complexType>
+	</element>
+	<element name="campaignListResponse">
+	 <complexType>
+		<sequence>
+			<element name="campaignListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_CampaignListData"/>
+	 	</sequence>
+	 </complexType>
+    </element>
+
+   <element name="ccRecList">
+	<complexType>
+		<sequence>
+			<element name="username" nillable="true" type="xsd:string"/>
+			<element name="password" nillable="true" type="xsd:string"/>
+			<element name="lang" nillable="true" type="xsd:string"/>
+		</sequence>
+	 </complexType>
+	</element>
+	<element name="ccRecListResponse">
+	 <complexType>
+		<sequence>
+			<element name="ccRecListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_CCRecListData"/>
+	 	</sequence>
+	 </complexType>
+    </element>
+
+
+   <element name="reconciliationReport">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+	  <element name="startDate" nillable="true" type="xsd:string"/>
+	  <element name="endDate" nillable="true" type="xsd:string"/>
+	  <element name="currency" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+   <element name="reconciliationReportResponse">
+    <complexType>
+     <sequence>
+      <element name="reconciliationReportReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_ReconciliationReportData"/>
+     </sequence>
+    </complexType>
+   </element>
+
+   <element name="currencyRatesList">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+	  <element name="currRatesDate" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+   <element name="currencyRatesListResponse">
+    <complexType>
+     <sequence>
+      <element name="currencyRatesListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_CurrencyRatesListData"/>
+     </sequence>
+    </complexType>
+   </element>
+
+   
+   <element name="insuranceQuote">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="referenceid" nillable="true" type="xsd:string"/>
+	  <element name="startDate" nillable="true" type="xsd:string"/>
+	  <element name="endDate" nillable="true" type="xsd:string"/>
+	  <element name="direction" nillable="true" type="xsd:string"/>
+	  <element name="country" nillable="true" type="xsd:string"/>
+	  <element name="totalAdult" type="xsd:int"/>
+	  <element name="totalSenior" type="xsd:int"/>
+	  <element name="addOn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="insuranceQuoteResponse">
+    <complexType>
+     <sequence>
+      <element name="insuranceQuoteReturn" nillable="true" type="tns2:GulfQuoteData"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+   <element name="insuranceSell">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="referenceid" nillable="true" type="xsd:string"/>
+	  <element name="startDate" nillable="true" type="xsd:string"/>
+	  <element name="endDate" nillable="true" type="xsd:string"/>
+	  <element name="direction" nillable="true" type="xsd:string"/>
+	  <element name="country" nillable="true" type="xsd:string"/>
+	  <element name="origin" nillable="true" type="xsd:string"/>
+	  <element name="destination" nillable="true" type="xsd:string"/>
+	  <element name="totalInsured" type="xsd:int"/>
+	  <element name="currencyCode" nillable="true" type="xsd:string"/>
+	  <element name="ccNumber" nillable="true" type="xsd:string"/>
+	  <element name="ccMonth" nillable="true" type="xsd:string"/>
+	  <element name="ccYear" nillable="true" type="xsd:string"/>
+	  <element name="ccName" nillable="true" type="xsd:string"/>
+	  <element name="ccCvv" nillable="true" type="xsd:string"/>
+	  <element name="insured" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_GulfInsuredData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="insuranceSellResponse">
+    <complexType>
+     <sequence>
+      <element name="insuranceSellReturn" nillable="true" type="tns2:GulfSellData"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+   
+   
+   <element name="countryList">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="countryListResponse">
+    <complexType>
+     <sequence>
+      <element name="countryListReturn" nillable="true" type="impl:ArrayOfCountryData"/>
+     </sequence>
+    </complexType>
+   </element>
+   
+   <element name="ssrDisplay">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="voyageCode" nillable="true" type="xsd:string"/>
+      <element name="rbd" nillable="true" type="xsd:string"/>
+      <element name="triptype" nillable="true" type="xsd:string"/>
+	  <element name="noSeats" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="ssrDisplayResponse">
+    <complexType>
+     <sequence>
+      <element name="ssrDisplayReturn" nillable="true" type="tns2:SSRDisplayData"/>
+     </sequence>
+    </complexType>
+   </element>
+
+   <element name="seatMap">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="origin" nillable="true" type="xsd:string"/>
+      <element name="destination" nillable="true" type="xsd:string"/>
+      <element name="flightdate" nillable="true" type="xsd:string"/>
+      <element name="flightno" nillable="true" type="xsd:string"/>
+      <element name="rbd" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="seatMapResponse">
+    <complexType>
+     <sequence>
+      <element name="seatMapReturn" nillable="true" type="tns2:SeatMapData"/>
+     </sequence>
+    </complexType>
+   </element>
+
+
+   <element name="bookingInfo">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="pnrnumber" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+	<element name="bookingInfoResponse">
+		<complexType>
+			<sequence>
+				<element name="bookingInfoReturn" nillable="true" type="tns2:BookingInfoData"/>
+			</sequence>
+		</complexType>
+	</element>
+   <element name="airportsList">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="airportsListResponse">
+    <complexType>
+     <sequence>
+      <element name="airportsListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_AirportsData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="toAirportsList">
+    <complexType>
+     <sequence>
+      <element name="originCode" nillable="true" type="xsd:string"/>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="toAirportsListResponse">
+    <complexType>
+     <sequence>
+      <element name="toAirportsListReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_ToAirportsData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="limitInfo">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="limitInfoResponse">
+    <complexType>
+     <sequence>
+      <element name="limitInfoReturn" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_LimitInfoData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addPassengerV2">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="direction" nillable="true" type="xsd:string"/>
+      <element name="depvoyagecode" nillable="true" type="xsd:string"/>
+      <element name="depclass" nillable="true" type="xsd:string"/>
+      <element name="retvoyagecode" nillable="true" type="xsd:string"/>
+      <element name="retclass" nillable="true" type="xsd:string"/>
+      <element name="passengers" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_PassengersData"/>
+	  <element name="spetypeid" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addPassengerV2Response">
+    <complexType>
+     <sequence>
+      <element name="addPassengerV2Return" nillable="true" type="tns2:ReferenceData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addPassengerV3">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="direction" nillable="true" type="xsd:string"/>
+      <element name="depvoyagecode" nillable="true" type="xsd:string"/>
+      <element name="depclass" nillable="true" type="xsd:string"/>
+      <element name="retvoyagecode" nillable="true" type="xsd:string"/>
+      <element name="retclass" nillable="true" type="xsd:string"/>
+      <element name="faresamount" nillable="true" type="xsd:double"/>
+      <element name="passengers" nillable="true" type="impl:ArrayOf_747913597_496923140_nillable_PassengersData"/>
+	  <element name="spetypeid" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addPassengerV3Response">
+    <complexType>
+     <sequence>
+      <element name="addPassengerV3Return" nillable="true" type="tns2:ReferenceData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="booking">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="referencenumber" type="xsd:long"/>
+      <element name="campaignId" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="bookingResponse">
+    <complexType>
+     <sequence>
+      <element name="bookingReturn" nillable="true" type="tns2:BookingData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="bookingCC">
+    <complexType>
+     <sequence>
+		<element name="username" nillable="true" type="xsd:string"/>
+		<element name="password" nillable="true" type="xsd:string"/>
+		<element name="lang" nillable="true" type="xsd:string"/>
+		<element name="referencenumber" type="xsd:long"/>
+		<element name="campaignId" type="xsd:long"/>
+		<element name="ccNumber" nillable="true" type="xsd:string"/>
+		<element name="ccMonth" nillable="true" type="xsd:string"/>
+		<element name="ccYear" nillable="true" type="xsd:string"/>
+		<element name="ccCvv" nillable="true" type="xsd:string"/>
+		<element name="ccCheckName" nillable="true" type="xsd:string"/>
+		<element name="ccCardCode" nillable="true" type="xsd:string"/>
+		<element name="ccInstalment" nillable="true" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="bookingCCResponse">
+    <complexType>
+     <sequence>
+      <element name="bookingCCReturn" nillable="true" type="tns2:BookingData"/>
+     </sequence>
+    </complexType>
+   </element>
+
+   <element name="preBooking">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="referencenumber" type="xsd:long"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="preBookingResponse">
+    <complexType>
+     <sequence>
+      <element name="preBookingReturn" nillable="true" type="tns2:PreBookingData"/>
+     </sequence>
+    </complexType>
+   </element>
+
+	<element name="recalculateTotalPrice">
+		<complexType>
+			<sequence>
+				<element name="username" nillable="true" type="xsd:string"/>
+				<element name="password" nillable="true" type="xsd:string"/>
+				<element name="lang" nillable="true" type="xsd:string"/>
+				<element name="referenceNumber" type="xsd:long"/>
+				<element name="campaignId" type="xsd:long"/>
+			</sequence>
+		</complexType>
+	</element>
+	<element name="recalculateTotalPriceResponse">
+		<complexType>
+			<sequence>
+				<element name="recalculateTotalPriceReturn" nillable="true" type="tns2:RecalculateTotalPriceData"/>
+			</sequence>
+		</complexType>
+	</element>	   
+   
+   <element name="maxServiceFee">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="direction" nillable="true" type="xsd:string"/>
+      <element name="depvoyagecode" nillable="true" type="xsd:string"/>
+      <element name="depclass" nillable="true" type="xsd:string"/>
+      <element name="retvoyagecode" nillable="true" type="xsd:string"/>
+      <element name="retclass" nillable="true" type="xsd:string"/>
+      <element name="adult" type="xsd:int"/>
+      <element name="child" type="xsd:int"/>
+      <element name="inf" type="xsd:int"/>
+      <element name="ogr" type="xsd:int"/>
+      <element name="tsk" type="xsd:int"/>
+      <element name="yp" type="xsd:int"/>
+      <element name="sc" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="maxServiceFeeResponse">
+    <complexType>
+     <sequence>
+      <element name="maxServiceFeeReturn" nillable="true" type="tns2:MaxServiceFeeData"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="availability">
+    <complexType>
+     <sequence>
+      <element name="username" nillable="true" type="xsd:string"/>
+      <element name="password" nillable="true" type="xsd:string"/>
+      <element name="lang" nillable="true" type="xsd:string"/>
+      <element name="direction" nillable="true" type="xsd:string"/>
+      <element name="origin" nillable="true" type="xsd:string"/>
+      <element name="destination" nillable="true" type="xsd:string"/>
+      <element name="date" nillable="true" type="xsd:string"/>
+      <element name="adult" type="xsd:int"/>
+      <element name="child" type="xsd:int"/>
+      <element name="inf" type="xsd:int"/>
+      <element name="ogr" type="xsd:int"/>
+      <element name="tsk" type="xsd:int"/>
+      <element name="yp" type="xsd:int"/>
+      <element name="sc" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="ArrayOf_747913597_496923140_nillable_TimeTableData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="TimeTableData" nillable="true" type="tns2:TimeTableData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_747913597_496923140_nillable_PsgrForTicketnumberData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PsgrForTicketnumberData" nillable="true" type="tns2:PsgrForTicketnumberData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_747913597_496923140_nillable_PassengersData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PassengersData" nillable="true" type="tns2:PassengersData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ArrayOf_747913597_496923140_nillable_PnrAddSeatInfoData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PnrAddSeatInfoData" nillable="true" type="tns2:PnrAddSeatInfoData"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="ArrayOf_747913597_496923140_nillable_GulfInsuredData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="GulfInsuredData" nillable="true" type="tns2:GulfInsuredData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfCountryData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="CountryData" nillable="true" type="tns2:CountryData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_747913597_496923140_nillable_PassengerIdData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PassengerIdData" nillable="true" type="tns2:PassengerIdData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_747913597_496923140_nillable_OpenJawAirportsData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="OpenJawAirportsData" nillable="true" type="tns2:OpenJawAirportsData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_747913597_496923140_nillable_SpecialTypeListData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="SpecialTypeListData" nillable="true" type="tns2:SpecialTypeListData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_747913597_496923140_nillable_CreditCardListData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="CreditCardListData" nillable="true" type="tns2:CreditCardListData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_747913597_496923140_nillable_CampaignListData">
+	<sequence>
+		<element maxOccurs="unbounded" minOccurs="0" name="CampaignListData" nillable="true" type="tns2:CampaignListData"/>
+	</sequence>
+   </complexType>
+
+   <complexType name="ArrayOf_747913597_496923140_nillable_CCRecListData">
+	<sequence>
+		<element maxOccurs="unbounded" minOccurs="0" name="CCRecListData" nillable="true" type="tns2:CCRecListData"/>
+	</sequence>
+   </complexType>
+   
+   <complexType name="ArrayOf_747913597_496923140_nillable_ReconciliationReportData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="ReconciliationReportData" nillable="true" type="tns2:ReconciliationReportData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ArrayOf_747913597_496923140_nillable_CurrencyRatesListData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="CurrencyRatesListData" nillable="true" type="tns2:CurrencyRatesListData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ArrayOf_747913597_496923140_nillable_SSRDisplayData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="SSRDisplayData" nillable="true" type="tns2:SSRDisplayData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ArrayOf_747913597_496923140_nillable_ExchangeFlight">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="ExchangeFlight" nillable="true" type="tns2:ArrayOfExchangeFlightData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ArrayOf_747913597_496923140_nillable_ExchangeFlightData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="ExchangeFlightData" nillable="true" type="tns2:ExchangeFlightData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ArrayOf_747913597_496923140_nillable_AirportsData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="AirportsData" nillable="true" type="tns2:AirportsData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_747913597_496923140_nillable_ToAirportsData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="ToAirportsData" nillable="true" type="tns2:ToAirportsData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOf_747913597_496923140_nillable_LimitInfoData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="LimitInfoData" nillable="true" type="tns2:LimitInfoData"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://data.atlasjetWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <complexType name="AvailabilityData">
+    <sequence>
+     <element name="flightData" nillable="true" type="tns2:ArrayOfAvailabilityFlightData"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   <complexType name="AvailabilityFlightData">
+    <sequence>
+     <element name="classData" nillable="true" type="tns2:ArrayOfAvailabilityClassData"/>
+     <element name="message" nillable="true" type="xsd:string"/>
+     <element name="segmentData" nillable="true" type="tns2:ArrayOfAvailabilitySegmentData"/>
+     <element name="voyagecode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="AvailabilityClassData">
+    <sequence>
+     <element name="adultprice" type="xsd:double"/>
+     <element name="cabinclass" nillable="true" type="xsd:string"/>
+     <element name="childprice" type="xsd:double"/>
+     <element name="classdesc" nillable="true" type="xsd:string"/>
+     <element name="completeclass" nillable="true" type="xsd:string"/>
+     <element name="currency" nillable="true" type="xsd:string"/>
+     <element name="infprice" type="xsd:double"/>
+     <element name="ogrprice" type="xsd:double"/>
+     <element name="scprice" type="xsd:double"/>
+     <element name="seat" type="xsd:int"/>
+     <element name="tskprice" type="xsd:double"/>
+     <element name="viewprice" type="xsd:double"/>
+     <element name="ypprice" type="xsd:double"/>
+     <element name="allowtype" type="xsd:string"/>
+     <element name="allowvalue" type="xsd:int"/>
+     <element name="rulelink" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfAvailabilityClassData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="AvailabilityClassData" nillable="true" type="tns2:AvailabilityClassData"/>
+    </sequence>
+   </complexType>
+   <complexType name="AvailabilitySegmentData">
+    <sequence>
+     <element name="depdate" nillable="true" type="xsd:string"/>
+     <element name="arrdate" nillable="true" type="xsd:string"/>
+     <element name="arrcode" nillable="true" type="xsd:string"/>
+     <element name="arrdesc" nillable="true" type="xsd:string"/>
+     <element name="arrtime" nillable="true" type="xsd:string"/>
+	 <element name="arrgmt" nillable="true" type="xsd:string"/>
+     <element name="depcode" nillable="true" type="xsd:string"/>
+     <element name="depdesc" nillable="true" type="xsd:string"/>
+     <element name="deptime" nillable="true" type="xsd:string"/>
+     <element name="depgmt" nillable="true" type="xsd:string"/>
+     <element name="flightno" nillable="true" type="xsd:string"/>
+     <element name="oakcode" nillable="true" type="xsd:string"/>
+     <element name="oakdesc" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfAvailabilitySegmentData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="AvailabilitySegmentData" nillable="true" type="tns2:AvailabilitySegmentData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfAvailabilityFlightData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="AvailabilityFlightData" nillable="true" type="tns2:AvailabilityFlightData"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="AvailLowFareData">
+    <sequence>
+     <element name="availLowFare" nillable="true" type="tns2:ArrayOfAvailLowFareInfo"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ArrayOfAvailLowFareInfo">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="AvailLowFareInfo" nillable="true" type="tns2:AvailLowFareInfo"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="AvailLowFareInfo">
+    <sequence>
+     <element name="priceno" type="xsd:int"/>
+     <element name="totalprice" type="xsd:double"/>
+     <element name="currency" nillable="true" type="xsd:string"/>
+     <element name="availLowFareFlight" nillable="true" type="tns2:ArrayOfAvailLowFareFlightInfo"/>
+     <element name="availLowFarePaxPrice" nillable="true" type="tns2:ArrayOfAvailLowFarePaxPriceInfo"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ArrayOfAvailLowFareFlightInfo">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="AvailLowFareFlightInfo" nillable="true" type="tns2:AvailLowFareFlightInfo"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="AvailLowFareFlightInfo">
+    <sequence>
+     <element name="fino" nillable="true" type="xsd:int"/>
+     <element name="routetype" nillable="true" type="xsd:string"/>
+     <element name="voyagecode" nillable="true" type="xsd:string"/>
+	 <element name="proclass" nillable="true" type="xsd:string"/>
+	 <element name="rulelink" nillable="true" type="xsd:string"/>
+	 <element name="message" nillable="true" type="xsd:string"/>
+	 <element name="availLowFareSegment" nillable="true" type="tns2:ArrayOfAvailLowFareSegmentInfo"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="ArrayOfAvailLowFareSegmentInfo">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="AvailLowFareSegmentInfo" nillable="true" type="tns2:AvailLowFareSegmentInfo"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="AvailLowFareSegmentInfo">
+    <sequence>
+     <element name="segno" nillable="true" type="xsd:int"/>
+     <element name="depcode" nillable="true" type="xsd:string"/>
+     <element name="depdesc" nillable="true" type="xsd:string"/>
+	 <element name="depdate" nillable="true" type="xsd:string"/>
+	 <element name="deptime" nillable="true" type="xsd:string"/>
+	 <element name="depgmt" nillable="true" type="xsd:string"/>
+     <element name="arrcode" nillable="true" type="xsd:string"/>
+     <element name="arrdesc" nillable="true" type="xsd:string"/>
+	 <element name="arrdate" nillable="true" type="xsd:string"/>
+	 <element name="arrtime" nillable="true" type="xsd:string"/>
+	 <element name="arrgmt" nillable="true" type="xsd:string"/>
+	 <element name="flightno" nillable="true" type="xsd:string"/>
+	 <element name="brandcode" nillable="true" type="xsd:string"/>
+	 <element name="cabin" nillable="true" type="xsd:string"/>
+	 <element name="rbd" nillable="true" type="xsd:string"/>
+	 <element name="seat" type="xsd:int"/>	 
+	 <element name="oakcode" nillable="true" type="xsd:string"/>
+	 <element name="oakdesc" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>   
+   
+   <complexType name="ArrayOfAvailLowFarePaxPriceInfo">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="AvailLowFarePaxPriceInfo" nillable="true" type="tns2:AvailLowFarePaxPriceInfo"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="AvailLowFarePaxPriceInfo">
+    <sequence>
+     <element name="paxtype" nillable="true" type="xsd:string"/>
+     <element name="paxcount" type="xsd:int"/>	 
+	 <element name="basefare" type="xsd:double"/>
+	 <element name="basefareDetail" nillable="true" type="tns2:ArrayOfBaseFareDetailInfo"/>
+	 <element name="taxvalue" type="xsd:double"/>
+	 <element name="baggageDetail" nillable="true" type="tns2:ArrayOfBaggageDetailInfo"/>
+	 <element name="taxDetail" nillable="true" type="tns2:ArrayOfTaxDetailInfo"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="ArrayOfBaseFareDetailInfo">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="BasefareDetailInfo" nillable="true" type="tns2:BasefareDetailInfo"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="BasefareDetailInfo">
+    <sequence>
+     <element name="fino" type="xsd:int"/>	 
+	 <element name="basefare" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   
+
+   <complexType name="ArrayOfBaggageDetailInfo">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="BaggageDetailInfo" nillable="true" type="tns2:BaggageDetailInfo"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="BaggageDetailInfo">
+    <sequence>
+     <element name="segno" type="xsd:int"/>	 
+	 <element name="allowvalue" type="xsd:int"/>
+	 <element name="allowtype" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ArrayOfTaxDetailInfo">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="TaxDetailInfo" nillable="true" type="tns2:TaxDetailInfo"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="TaxDetailInfo">
+    <sequence>
+     <element name="segno" type="xsd:int"/>	 
+	 <element name="taxvalue" type="xsd:double"/>
+	 <element name="taxcode" nillable="true" type="xsd:string"/>
+	 <element name="taxdesc" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="SystemMessageData">
+    <sequence>
+     <element name="code" nillable="true" type="xsd:string"/>
+     <element name="message" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="GulfPolicyOutData">
+    <sequence>
+     <element name="currencyCode" nillable="true" type="xsd:string"/>
+     <element name="totalAmount" nillable="true" type="xsd:string"/>
+     <element name="totalTaxAmount" nillable="true" type="xsd:string"/>
+     <element name="productDescription" nillable="true" type="xsd:string"/>
+     <element name="policyNumber" nillable="true" type="xsd:string"/>
+     <element name="policyStage" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="TimeTableData">
+    <sequence>
+     <element name="arriveTime" nillable="true" type="xsd:string"/>
+     <element name="departureTime" nillable="true" type="xsd:string"/>
+     <element name="flightNo" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   <complexType name="FareQuoteData">
+    <sequence>
+     <element name="faresData" nillable="true" type="tns2:FareQuoteFaresData"/>
+     <element name="flightData" nillable="true" type="tns2:FareQuoteFlightData"/>
+     <element name="message" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   <complexType name="FareQuoteFaresData">
+    <sequence>
+     <element name="fareData" nillable="true" type="tns2:ArrayOfFareQuoteFareData"/>
+     <element name="grandTotalData" nillable="true" type="tns2:FareQuoteGrandTotalData"/>
+    </sequence>
+   </complexType>
+   <complexType name="FareQuoteFareData">
+    <sequence>
+     <element name="baseprice" type="xsd:double"/>
+     <element name="currency" nillable="true" type="xsd:string"/>
+     <element name="passcount" type="xsd:int"/>
+     <element name="servicefee" type="xsd:double"/>
+     <element name="tax" type="xsd:double"/>
+     <element name="totalprice" type="xsd:double"/>
+     <element name="type" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfFareQuoteFareData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="FareQuoteFareData" nillable="true" type="tns2:FareQuoteFareData"/>
+    </sequence>
+   </complexType>
+   <complexType name="FareQuoteGrandTotalData">
+    <sequence>
+     <element name="baseprice" type="xsd:double"/>
+     <element name="currency" nillable="true" type="xsd:string"/>
+     <element name="servicefee" type="xsd:double"/>
+     <element name="tax" type="xsd:double"/>
+     <element name="totalssrfee" type="xsd:double"/>
+     <element name="totalprice" type="xsd:double"/>
+     <element name="totalpriceTL" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="FareQuoteFlightData">
+    <sequence>
+     <element name="depData" nillable="true" type="tns2:FareQuoteDepartureData"/>
+     <element name="retData" nillable="true" type="tns2:FareQuoteReturnData"/>
+    </sequence>
+   </complexType>
+   <complexType name="FareQuoteDepartureData">
+    <sequence>
+     <element name="segmentData" nillable="true" type="tns2:ArrayOfFareQuoteSegmentData"/>
+    </sequence>
+   </complexType>
+   <complexType name="FareQuoteSegmentData">
+    <sequence>
+     <element name="arrcode" nillable="true" type="xsd:string"/>
+     <element name="arrdesc" nillable="true" type="xsd:string"/>
+     <element name="arrtime" nillable="true" type="xsd:string"/>
+     <element name="arrgmt" nillable="true" type="xsd:string"/>
+     <element name="depcode" nillable="true" type="xsd:string"/>
+     <element name="depdesc" nillable="true" type="xsd:string"/>
+     <element name="deptime" nillable="true" type="xsd:string"/>
+     <element name="depgmt" nillable="true" type="xsd:string"/>
+     <element name="flightno" nillable="true" type="xsd:string"/>
+     <element name="arrdate" nillable="true" type="xsd:string"/>
+     <element name="depdate" nillable="true" type="xsd:string"/>
+     <element name="allowvalue" nillable="true" type="xsd:string"/>
+     <element name="oakcode" nillable="true" type="xsd:string"/>
+     <element name="oakdesc" nillable="true" type="xsd:string"/>
+     <element name="rbdcode" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfFareQuoteSegmentData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="FareQuoteSegmentData" nillable="true" type="tns2:FareQuoteSegmentData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfPassengerSSRData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PassengerSSRData" nillable="true" type="tns2:PassengerSSRData"/>
+    </sequence>
+   </complexType>   
+   <complexType name="ArrayOfPassengerSeatData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PassengerSeatData" nillable="true" type="tns2:PassengerSeatData"/>
+    </sequence>
+   </complexType>   
+   <complexType name="ArrayOfPassengerSSRReFlightData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PassengerSSRReFlightData" nillable="true" type="tns2:PassengerSSRReFlightData"/>
+    </sequence>
+   </complexType>   
+   <complexType name="FareQuoteReturnData">
+    <sequence>
+     <element name="segmentData" nillable="true" type="tns2:ArrayOfFareQuoteSegmentData"/>
+    </sequence>
+   </complexType>
+	<complexType name="RecalculateTotalPriceData">
+		<sequence>
+			<element name="discountprice" type="xsd:double"/>
+			<element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+			<element name="totalbaseprice" type="xsd:double"/>
+			<element name="totaltaxprice" type="xsd:double"/>
+			<element name="totalsfprice" type="xsd:double"/>
+			<element name="totalssrprice" type="xsd:double"/>
+			<element name="totalprice" type="xsd:double"/>
+			<element name="payprice" type="xsd:double"/>
+			<element name="currency" nillable="true" type="xsd:string"/>
+		</sequence>
+	</complexType>
+   
+   <complexType name="CancelPnrPriceData">
+    <sequence>
+     <element name="currency" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+     <element name="totalBackPrice" type="xsd:double"/>
+     <element name="totalFlightPrice" type="xsd:double"/>
+     <element name="totalPenaltyPrice" type="xsd:double"/>
+     <element name="totalBackSSRFee" type="xsd:double"/>
+     <element name="totalServiceFee" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="PsgrForTicketnumberData">
+    <sequence>
+     <element name="psgrid" type="xsd:int"/>
+     <element name="ticketnumber" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   <complexType name="PassengersData">
+    <sequence>
+     <element name="birthDate" nillable="true" type="xsd:string"/>
+     <element name="countryCode" nillable="true" type="xsd:string"/>
+     <element name="email" nillable="true" type="xsd:string"/>
+     <element name="firstName" nillable="true" type="xsd:string"/>
+     <element name="gender" nillable="true" type="xsd:string"/>
+     <element name="identityNo" nillable="true" type="xsd:string"/>
+     <element name="jetmilCardNo" nillable="true" type="xsd:string"/>
+     <element name="lastName" nillable="true" type="xsd:string"/>
+     <element name="order" nillable="true" type="xsd:string"/>
+     <element name="passaportNo" nillable="true" type="xsd:string"/>
+     <element name="passengerType" nillable="true" type="xsd:string"/>
+     <element name="phoneArea" nillable="true" type="xsd:string"/>
+     <element name="phoneNumber" nillable="true" type="xsd:string"/>
+     <element name="popdApprove" nillable="true" type="xsd:string"/>
+     <element name="psgrssrdata" nillable="true" type="tns2:ArrayOfPassengerSSRData"/>
+     <element name="psgrseatdata" nillable="true" type="tns2:ArrayOfPassengerSeatData"/>
+    </sequence>
+   </complexType> 
+   
+   <complexType name="PnrAddSeatInfoData">
+    <sequence>
+     <element name="psgrid" type="xsd:int"/>
+     <element name="segid" type="xsd:int"/>
+     <element name="seatnumber" type="xsd:int"/>
+     <element name="seatlabel" nillable="true" type="xsd:string"/>
+     <element name="emdnumber" nillable="true" type="xsd:string"/>
+     <element name="seatfee" type="xsd:double"/>
+     <element name="seatcurr" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>    
+   
+   <complexType name="ArrayOfPnrAddSeatInfoData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PnrAddSeatInfoData" nillable="true" type="tns2:PnrAddSeatInfoData"/>
+    </sequence>
+   </complexType>   
+   
+   <complexType name="GulfInsuredData">
+    <sequence>
+     <element name="TitleNm" nillable="true" type="xsd:string"/>
+     <element name="FirstNm" nillable="true" type="xsd:string"/>
+     <element name="LastNm" nillable="true" type="xsd:string"/>
+     <element name="StreetLn1Nm" nillable="true" type="xsd:string"/>
+     <element name="EmailAddr" nillable="true" type="xsd:string"/>
+     <element name="PhoneNo" nillable="true" type="xsd:string"/>
+     <element name="CntryNm" nillable="true" type="xsd:string"/>
+     <element name="InsuredIdNo" nillable="true" type="xsd:string"/>
+     <element name="BirthDt" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="PassengerSSRData">
+    <sequence>
+     <element name="segno" type="xsd:int"/>
+     <element name="ssrno" type="xsd:int"/>
+     <element name="ssrcode" nillable="true" type="xsd:string"/>
+     <element name="ssravail" nillable="true" type="xsd:string"/>
+     <element name="ssrtext" nillable="true" type="xsd:string"/>
+     <element name="ssrnote" nillable="true" type="xsd:string"/>
+     <element name="reselflightflag" type="xsd:int"/>
+     <element name="reselflight" nillable="true" type="tns2:ArrayOfPassengerSSRReFlightData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="PassengerSeatData">
+    <sequence>
+     <element name="origin" nillable="true" type="xsd:string"/>
+     <element name="destination" nillable="true" type="xsd:string"/>
+     <element name="flightdate" nillable="true" type="xsd:string"/>
+     <element name="flightno" nillable="true" type="xsd:string"/>
+     <element name="rbd" nillable="true" type="xsd:string"/>
+     <element name="seatLabel" nillable="true" type="xsd:string"/>
+     <element name="seatNumber" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="PassengerSSRReFlightData">
+    <sequence>
+     <element name="transfersegno" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="PassengerIdData">
+    <sequence>
+     <element name="psgrid" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="PnrDivideData">
+    <sequence>
+     <element name="status" type="xsd:boolean"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+     <element name="mainPnrNumber" type="xsd:string"/>
+     <element name="pnrNumber" type="xsd:string"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ReferenceData">
+    <sequence>
+     <element name="refnumber" type="xsd:long"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+     <element name="faresData" nillable="true" type="tns2:FareQuoteFaresData"/>
+     <element name="flightData" nillable="true" type="tns2:FareQuoteFlightData"/>
+    </sequence>
+   </complexType>
+   <complexType name="CancelPnrData">
+    <sequence>
+     <element name="status" type="xsd:boolean"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   <complexType name="CancelPreBookingData">
+    <sequence>
+     <element name="status" type="xsd:boolean"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="ExchangeSessionData">
+    <sequence>
+     <element name="sessionId" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="ExchangeChargesData">
+    <sequence>
+     <element name="message" type="xsd:string"/>
+     <element name="totalPenalty" type="xsd:double"/>
+     <element name="totalAddCollection" type="xsd:double"/>
+     <element name="totalRefund" type="xsd:double"/>
+     <element name="totalPay" type="xsd:double"/>
+     <element name="currency" type="xsd:string"/>
+     <element name="sessionId" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+     <element name="flights" nillable="true" type="tns2:ArrayOf_747913597_496923140_nillable_ExchangeChargesFlightData"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="ArrayOf_747913597_496923140_nillable_ExchangeChargesFlightData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="ExchangeChargesFlightData" nillable="true" type="tns2:ExchangeChargesFlightData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="DoExchangeData">
+    <sequence>
+     <element name="exchange" type="xsd:boolean"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="PnrAddSeatData">
+    <sequence>
+     <element name="status" type="xsd:boolean"/>
+     <element name="pnrnumber" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+     <element name="seatInfo" nillable="true" type="tns2:ArrayOfPnrAddSeatInfoData"/>
+	 <element name="payInfo" nillable="true" type="tns2:ArrayOfPayDetailData"/>
+    </sequence>
+   </complexType>
+   
+
+   <complexType name="OpenJawAirportsData">
+    <sequence>
+     <element name="destinationCode" nillable="true" type="xsd:string"/>
+     <element name="destinationName" nillable="true" type="xsd:string"/>
+     <element name="originCode" nillable="true" type="xsd:string"/>
+     <element name="originName" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   <complexType name="JetmilInfoData">
+    <sequence>
+     <element name="birthdate" nillable="true" type="xsd:string"/>
+     <element name="firstName" nillable="true" type="xsd:string"/>
+     <element name="gender" nillable="true" type="xsd:string"/>
+     <element name="lastName" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   <complexType name="SpecialTypeListData">
+    <sequence>
+     <element name="code" nillable="true" type="xsd:string"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>   
+   <complexType name="CreditCardListData">
+    <sequence>
+     <element name="code" nillable="true" type="xsd:string"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+	 <element name="instalment" type="xsd:int"/>
+	 <element name="bankCode" nillable="true" type="xsd:long"/>
+	 <element name="bankName" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>   
+  <complexType name="CampaignListData">
+	<sequence>
+		<element name="campaignId" type="xsd:long"/>
+		<element name="campaignName" nillable="true" type="xsd:string"/>
+		<element name="campaignDiscount" type="xsd:double"/>
+		<element name="campaignCouponFlag" nillable="true" type="xsd:string"/>
+		<element name="campaignCurrency" nillable="true" type="xsd:string"/>
+		<element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+	</sequence>
+   </complexType>
+
+  <complexType name="CCRecListData">
+	<sequence>
+		<element name="pan" type="xsd:string"/>
+		<element name="cardName" nillable="true" type="xsd:string"/>
+		<element name="cvv" type="xsd:string"/>
+		<element name="expMon" nillable="true" type="xsd:string"/>
+		<element name="expYear" nillable="true" type="xsd:string"/>
+		<element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+	</sequence>
+   </complexType>
+
+   <complexType name="ReconciliationReportData">
+    <sequence>
+     <element name="pnr" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="CurrencyRatesListData">
+    <sequence>
+     <element name="excratedate" nillable="true" type="xsd:string"/>
+     <element name="currencyval" nillable="true" type="xsd:int"/>
+     <element name="currency" nillable="true" type="xsd:string"/>
+     <element name="excrate" nillable="true" type="xsd:string"/>
+     <element name="excratecurr" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="GulfQuoteData">
+    <sequence>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+     <element name="policyOut" nillable="true" type="tns2:GulfPolicyOutData"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="GulfSellData">
+    <sequence>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+     <element name="policyOut" nillable="true" type="tns2:GulfPolicyOutData"/>
+    </sequence>
+   </complexType>
+   <complexType name="CountryData">
+    <sequence>
+     <element name="code" nillable="true" type="xsd:string"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+    <complexType name="SSRDisplayData">
+    <sequence>
+     <element name="currency" type="xsd:string"/>
+      <element name="flight" nillable="true" type="tns2:ArrayOfFlightData"/>
+      <element name="flightssr" nillable="true" type="tns2:ArrayOfFlightSSRData"/>
+      <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   
+    <complexType name="SeatMapData">
+    <sequence>
+     <element name="currency" type="xsd:string"/>
+     <element name="cabinInfo" nillable="true" type="tns2:ArrayOfCabinInfoData"/>
+      <element name="seatMap" nillable="true" type="tns2:ArrayOfSeatInfoData"/>
+      <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>   
+   
+	<complexType name="ArrayOfExchangeFlightData">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="ExchangeFlightData" nillable="true" type="tns2:ExchangeFlightData"/>
+		</sequence>
+	</complexType>   
+   
+   <complexType name="ExchangeFlightData">
+    <sequence>
+     <element name="action" nillable="true" type="xsd:string"/>
+     <element name="segid" nillable="true" type="xsd:string"/>
+     <element name="voyagecode" nillable="true" type="xsd:string"/>
+     <element name="rbd" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>   
+   
+   <complexType name="ExchangeChargesFlightData">
+    <sequence>
+     <element name="segid" nillable="true" type="xsd:int"/>
+     <element name="depcode" nillable="true" type="xsd:string"/>
+     <element name="depdesc" nillable="true" type="xsd:string"/>
+     <element name="depdate" nillable="true" type="xsd:string"/>
+     <element name="deptime" nillable="true" type="xsd:string"/>
+     <element name="arrcode" nillable="true" type="xsd:string"/>
+     <element name="arrdesc" nillable="true" type="xsd:string"/>
+     <element name="arrdate" nillable="true" type="xsd:string"/>
+     <element name="arrtime" nillable="true" type="xsd:string"/>
+     <element name="flightno" nillable="true" type="xsd:string"/>
+	 <element name="opflightno" nillable="true" type="xsd:string"/>
+	 <element name="opcarrier" nillable="true" type="xsd:string"/>
+	 <element name="classcode" nillable="true" type="xsd:string"/>
+	 <element name="brandcode" nillable="true" type="xsd:string"/>
+	 <element name="planetype" nillable="true" type="xsd:string"/>
+	 <element name="depterm" nillable="true" type="xsd:string"/>
+	 <element name="arrterm" nillable="true" type="xsd:string"/>
+	 <element name="status" nillable="true" type="xsd:string"/>
+	 <element name="transfer" nillable="true" type="xsd:int"/>
+    </sequence>
+   </complexType>   
+   
+   <complexType name="AirportsData">
+    <sequence>
+     <element name="code" nillable="true" type="xsd:string"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ToAirportsData">
+    <sequence>
+     <element name="code" nillable="true" type="xsd:string"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   <complexType name="LimitInfoData">
+    <sequence>
+     <element name="balance" type="xsd:double"/>
+     <element name="currency" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+     <element name="totallimit" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="BookingData">
+    <sequence>
+     <element name="bookingTicketData" nillable="true" type="tns2:ArrayOfBookingTicketData"/>
+     <element name="bookingPayDetailData" nillable="true" type="tns2:ArrayOfPayDetailData"/>
+     <element name="note" nillable="true" type="xsd:string"/>
+     <element name="pnrnumber" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+   <complexType name="BookingTicketData">
+    <sequence>
+     <element name="id" nillable="true" type="xsd:string"/>
+     <element name="lang" nillable="true" type="xsd:string"/>
+     <element name="link" nillable="true" type="xsd:string"/>
+     <element name="order" type="xsd:int"/>
+     <element name="ticketNumber" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="PayDetailData">
+    <sequence>
+     <element name="orderid" nillable="true" type="xsd:long"/>
+     <element name="orderseq" nillable="true" type="xsd:int"/>
+     <element name="authcode" nillable="true" type="xsd:string"/>
+     <element name="paymentdate" nillable="true" type="xsd:string"/>
+     <element name="paytype" nillable="true" type="xsd:string"/>
+     <element name="amount" nillable="true" type="xsd:double"/>
+     <element name="currency" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfBookingTicketData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="BookingTicketData" nillable="true" type="tns2:BookingTicketData"/>
+    </sequence>
+   </complexType>
+   <complexType name="ArrayOfPayDetailData">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="PayDetailData" nillable="true" type="tns2:PayDetailData"/>
+    </sequence>
+   </complexType>
+
+   <complexType name="FlightData">
+    <sequence>
+     <element name="segno" type="xsd:int"/>
+     <element name="deppoint" nillable="true" type="xsd:string"/>
+     <element name="arrpoint" nillable="true" type="xsd:string"/>
+     <element name="depdate" nillable="true" type="xsd:string"/>
+     <element name="ak" nillable="true" type="xsd:string"/>
+     <element name="flightno" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   
+   <complexType name="ReSelFlightData">
+    <sequence>
+     <element name="segno" type="xsd:int"/>
+     <element name="deppoint" nillable="true" type="xsd:string"/>
+     <element name="arrpoint" nillable="true" type="xsd:string"/>
+     <element name="depdate" nillable="true" type="xsd:string"/>
+     <element name="ak" nillable="true" type="xsd:string"/>
+     <element name="flightno" nillable="true" type="xsd:string"/>
+     <element name="ssrfee" nillable="true" type="xsd:string"/>
+     <element name="ssrcurrency" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>   
+   
+   <complexType name="ArrayOfFlightData">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="FlightData" nillable="true" type="tns2:FlightData"/>
+		</sequence>
+	</complexType>
+
+   <complexType name="ArrayOfReSelFlightData">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="ReSelFlightData" nillable="true" type="tns2:ReSelFlightData"/>
+		</sequence>
+	</complexType>
+
+	<complexType name="FlightSSRData">
+    <sequence>
+     <element name="segno" type="xsd:int"/>
+     <element name="ssrno" type="xsd:int"/>
+     <element name="ssravail" nillable="true" type="xsd:string"/>
+     <element name="ssravaildesc" nillable="true" type="xsd:string"/>
+     <element name="ssrcode" nillable="true" type="xsd:string"/>
+     <element name="ssrfee" nillable="true" type="xsd:string"/>
+     <element name="ssrtext" nillable="true" type="xsd:string"/>
+     <element name="ssrtexteng" nillable="true" type="xsd:string"/>
+     <element name="rfic" nillable="true" type="xsd:string"/>
+     <element name="rfisc" nillable="true" type="xsd:string"/>
+     <element name="reselflightflag" type="xsd:int"/>
+     <element name="reselflight" nillable="true" type="tns2:ArrayOfReSelFlightData"/>
+    </sequence>
+    </complexType>
+	<complexType name="ArrayOfFlightSSRData">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="FlightSSRData" nillable="true" type="tns2:FlightSSRData"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="CabinInfoData">
+    <sequence>
+     <element name="asr" type="xsd:int"/>
+     <element name="seatLabels" nillable="true" type="xsd:string"/>
+     <element name="rowsize" type="xsd:int"/>
+    </sequence>
+    </complexType>
+    
+    <complexType name="ArrayOfCabinInfoData">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="CabinInfoData" nillable="true" type="tns2:CabinInfoData"/>
+		</sequence>
+	</complexType>	
+    
+    
+    <complexType name="SeatInfoData">
+    <sequence>
+     <element name="exit" type="xsd:int"/>
+     <element name="seatLabel" nillable="true" type="xsd:string"/>
+     <element name="seatNumber" type="xsd:int"/>
+     <element name="seatStatus" nillable="true" type="xsd:string"/>
+     <element name="seatType" nillable="true" type="xsd:string"/>
+     <element name="seatFee" type="xsd:double"/>
+    </sequence>
+    </complexType>
+	<complexType name="ArrayOfSeatInfoData">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="SeatInfoData" nillable="true" type="tns2:SeatInfoData"/>
+		</sequence>
+	</complexType>	
+	
+   <complexType name="PreBookingData">
+    <sequence>
+     <element name="pnrnumber" nillable="true" type="xsd:string"/>
+     <element name="note" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+     <element name="expiredate" nillable="true" type="xsd:string"/>
+     <element name="refnumber" type="xsd:long"/>
+    </sequence>
+   </complexType>
+   <complexType name="MaxServiceFeeData">
+    <sequence>
+     <element name="flightData" nillable="true" type="tns2:FareQuoteFlightData"/>
+     <element name="servicefee" type="xsd:double"/>
+     <element name="currency" nillable="true" type="xsd:string"/>
+     <element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+    </sequence>
+   </complexType>
+	<complexType name="BookingInfoData">
+		<sequence>
+			<element name="pnrnumber" nillable="true" type="xsd:string"/>
+			<element name="status" nillable="true" type="xsd:string"/>
+			<element name="agency" nillable="true" type="xsd:string"/>
+			<element name="agent" nillable="true" type="xsd:string"/>
+			<element name="issueDate" nillable="true" type="xsd:string"/>
+			<element name="expireDate" nillable="true" type="xsd:string"/>
+			<element name="readonly" nillable="true" type="xsd:boolean"/>
+			<element name="systemMessageData" nillable="true" type="tns2:SystemMessageData"/>
+			<element name="passengers" nillable="true" type="tns2:ArrayOf_747913597_496923140_nillable_BookingInfoPassengersData"/>
+			<element name="flightInfo" nillable="true" type="tns2:ArrayOf_747913597_496923140_nillable_BookingInfoFlightData"/>
+		</sequence>
+	</complexType>
+	<complexType name="BookingInfoPassengersData">
+		<sequence>
+			<element name="passengerType" nillable="true" type="xsd:string"/>
+			<element name="namenumber" nillable="true" type="xsd:string"/>
+			<element name="passengerName" nillable="true" type="xsd:string"/>
+			<element name="firstName" nillable="true" type="xsd:string"/>
+			<element name="lastName" nillable="true" type="xsd:string"/>
+			<element name="birthDate" nillable="true" type="xsd:string"/>
+			<element name="gender" nillable="true" type="xsd:string"/>
+			<element name="countryCode" nillable="true" type="xsd:string"/>
+			<element name="phoneArea" nillable="true" type="xsd:string"/>
+			<element name="phoneNumber" nillable="true" type="xsd:string"/>
+			<element name="email" nillable="true" type="xsd:string"/>
+			<element name="jetmilCardNo" nillable="true" type="xsd:string"/>
+			<element name="order" nillable="true" type="xsd:string"/>
+			<element name="identityNo" nillable="true" type="xsd:string"/>
+			<element name="passaportNo" nillable="true" type="xsd:string"/>
+			<element name="ticketNumber" nillable="true" type="xsd:string"/>
+			<element name="priceDetail" nillable="true" type="tns2:BookingInfoPriceDetailData"/>
+			<element name="ssr" nillable="true" type="tns2:ArrayOf_747913597_496923140_nillable_BookingInfoSsrData"/>
+		</sequence>
+	</complexType>
+	<complexType name="BookingInfoPriceDetailData">
+		<sequence>
+			<element name="currency" nillable="true" type="xsd:string"/>
+			<element name="baseprice" nillable="true" type="xsd:double"/>
+			<element name="taxprice" nillable="true" type="xsd:double"/>
+			<element name="servicefee" nillable="true" type="xsd:double"/>
+			<element name="totalprice" nillable="true" type="xsd:double"/>
+			<element name="grandtotalprice" nillable="true" type="xsd:double"/>
+			<element name="taxDetails" nillable="true" type="tns2:ArrayOf_747913597_496923140_nillable_BookingInfoTaxDetailData"/>
+		</sequence>
+	</complexType>
+	<complexType name="BookingInfoTaxDetailData">
+		<sequence>
+			<element name="code" nillable="true" type="xsd:string"/>
+			<element name="name" nillable="true" type="xsd:string"/>
+			<element name="price" nillable="true" type="xsd:double"/>
+		</sequence>
+	</complexType>
+	<complexType name="BookingInfoSsrData">
+		<sequence>
+			<element name="ssrid" nillable="true" type="xsd:int"/>
+			<element name="ssrcode" nillable="true" type="xsd:string"/>
+			<element name="ssremdno" nillable="true" type="xsd:string"/>
+			<element name="ssremdtype" nillable="true" type="xsd:string"/>
+			<element name="ssrsegid" nillable="true" type="xsd:int"/>
+			<element name="rfic" nillable="true" type="xsd:string"/>
+			<element name="rfisc" nillable="true" type="xsd:string"/>
+			<element name="ssrfee" nillable="true" type="xsd:double"/>
+			<element name="ssrcurrency" nillable="true" type="xsd:string"/>
+			<element name="ssrfreetext" nillable="true" type="xsd:string"/>
+		</sequence>
+	</complexType>
+	<complexType name="BookingInfoFlightData">
+		<sequence>
+			<element name="classcode" nillable="true" type="xsd:string"/>
+			<element name="classdesc" nillable="true" type="xsd:string"/>
+			<element name="status" nillable="true" type="xsd:string"/>
+			<element name="baggage" nillable="true" type="xsd:string"/>
+			<element name="ffamilycode" nillable="true" type="xsd:string"/>
+			<element name="leg" nillable="true" type="tns2:BookingInfoLegData"/>
+		</sequence>
+	</complexType>
+	<complexType name="BookingInfoLegData">
+		<sequence>
+			<element name="segid" nillable="true" type="xsd:string"/>
+			<element name="flightno" nillable="true" type="xsd:string"/>
+			<element name="depdate" nillable="true" type="xsd:string"/>
+			<element name="deptime" nillable="true" type="xsd:string"/>
+			<element name="depgmt" nillable="true" type="xsd:string"/>
+			<element name="arrdate" nillable="true" type="xsd:string"/>
+			<element name="arrtime" nillable="true" type="xsd:string"/>
+			<element name="arrgmt" nillable="true" type="xsd:string"/>
+			<element name="depcode" nillable="true" type="xsd:string"/>
+			<element name="depdesc" nillable="true" type="xsd:string"/>
+			<element name="arrcode" nillable="true" type="xsd:string"/>
+			<element name="arrdesc" nillable="true" type="xsd:string"/>
+			<element name="opflightno" nillable="true" type="xsd:string"/>
+			<element name="opcarrier" nillable="true" type="xsd:string"/>
+			<element name="planetype" nillable="true" type="xsd:string"/>
+			<element name="arrterm" nillable="true" type="xsd:string"/>
+			<element name="depterm" nillable="true" type="xsd:string"/>
+			<element name="status" nillable="true" type="xsd:string"/>
+			<element name="transfer" nillable="true" type="xsd:int"/>
+		</sequence>
+	</complexType>
+	<complexType name="ArrayOf_747913597_496923140_nillable_BookingInfoFlightData">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="BookingInfoFlightData" nillable="true" type="tns2:BookingInfoFlightData"/>
+		</sequence>
+	</complexType>
+	<complexType name="ArrayOf_747913597_496923140_nillable_BookingInfoPassengersData">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="BookingInfoPassengersData" nillable="true" type="tns2:BookingInfoPassengersData"/>
+		</sequence>
+	</complexType>
+	<complexType name="ArrayOf_747913597_496923140_nillable_BookingInfoTaxDetailData">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="BookingInfoTaxDetailData" nillable="true" type="tns2:BookingInfoTaxDetailData"/>
+		</sequence>
+	</complexType>
+	<complexType name="ArrayOf_747913597_496923140_nillable_BookingInfoSsrData">
+		<sequence>
+			<element maxOccurs="unbounded" minOccurs="0" name="BookingInfoSsrData" nillable="true" type="tns2:BookingInfoSsrData"/>
+		</sequence>
+	</complexType>
+
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="psgrForTicketNumberRequest">
+     <wsdl:part element="impl:psgrForTicketNumber" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="addPassengerRequest">
+     <wsdl:part element="impl:addPassenger" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+  
+   <wsdl:message name="recalculateTotalPriceRequest">
+	<wsdl:part element="impl:recalculateTotalPrice" name="parameters">
+	</wsdl:part>
+   </wsdl:message>
+   
+	<wsdl:message name="recalculateTotalPriceResponse">
+		<wsdl:part element="impl:recalculateTotalPriceResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+
+   <wsdl:message name="pnrDivideRequest">
+     <wsdl:part element="impl:pnrDivide" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+
+   <wsdl:message name="availabilityV3Response">
+     <wsdl:part element="impl:availabilityV3Response" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="availabilityV4Response">
+     <wsdl:part element="impl:availabilityV4Response" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="availLowFareResponse">
+     <wsdl:part element="impl:availLowFareResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+
+
+   <wsdl:message name="jetmilInfoRequest">
+     <wsdl:part element="impl:jetmilInfo" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="bookingResponse">
+     <wsdl:part element="impl:bookingResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="bookingCCResponse">
+     <wsdl:part element="impl:bookingCCResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+
+   <wsdl:message name="maxServiceFeeRequest">
+     <wsdl:part element="impl:maxServiceFee" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="availabilityResponse">
+     <wsdl:part element="impl:availabilityResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="faresResponse">
+     <wsdl:part element="impl:faresResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="toAirportsListRequest">
+     <wsdl:part element="impl:toAirportsList" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="preBookingRequest">
+     <wsdl:part element="impl:preBooking" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="cancelPnrPriceRequest">
+     <wsdl:part element="impl:cancelPnrPrice" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="cancelPnrPriceResponse">
+     <wsdl:part element="impl:cancelPnrPriceResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="timetableResponse">
+     <wsdl:part element="impl:timetableResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="toAirportsListResponse">
+     <wsdl:part element="impl:toAirportsListResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="limitInfoResponse">
+     <wsdl:part element="impl:limitInfoResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="addPassengerResponse">
+     <wsdl:part element="impl:addPassengerResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="pnrDivideResponse">
+     <wsdl:part element="impl:pnrDivideResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  
+   <wsdl:message name="specialTypeListResponse">
+     <wsdl:part element="impl:specialTypeListResponse" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+
+   <wsdl:message name="ccListResponse">
+     <wsdl:part element="impl:ccListResponse" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+	<wsdl:message name="campaignListResponse">
+		<wsdl:part element="impl:campaignListResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+
+	<wsdl:message name="ccRecListResponse">
+		<wsdl:part element="impl:ccRecListResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+   
+   <wsdl:message name="reconciliationReportResponse">
+     <wsdl:part element="impl:reconciliationReportResponse" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="currencyRatesListResponse">
+     <wsdl:part element="impl:currencyRatesListResponse" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+
+   <wsdl:message name="insuranceQuoteResponse">
+     <wsdl:part element="impl:insuranceQuoteResponse" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="insuranceSellResponse">
+     <wsdl:part element="impl:insuranceSellResponse" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="countryListResponse">
+     <wsdl:part element="impl:countryListResponse" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="ssrDisplayResponse">
+     <wsdl:part element="impl:ssrDisplayResponse" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="seatMapResponse">
+     <wsdl:part element="impl:seatMapResponse" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+
+	<wsdl:message name="bookingInfoResponse">
+     <wsdl:part element="impl:bookingInfoResponse" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+
+   <wsdl:message name="airportsListResponse">
+     <wsdl:part element="impl:airportsListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="bookingRequest">
+     <wsdl:part element="impl:booking" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="bookingCCRequest">
+     <wsdl:part element="impl:bookingCC" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="jetmilInfoResponse">
+     <wsdl:part element="impl:jetmilInfoResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="psgrForTicketNumberResponse">
+     <wsdl:part element="impl:psgrForTicketNumberResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="specialTypeListRequest">
+     <wsdl:part element="impl:specialTypeList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="ccListRequest">
+     <wsdl:part element="impl:ccList" name="parameters">
+    </wsdl:part>
+   </wsdl:message>
+   <wsdl:message name="campaignListRequest">
+	<wsdl:part element="impl:campaignList" name="parameters">
+	</wsdl:part>
+   </wsdl:message>
+
+   <wsdl:message name="ccRecListRequest">
+	<wsdl:part element="impl:ccRecList" name="parameters">
+	</wsdl:part>
+   </wsdl:message>
+  
+  <wsdl:message name="reconciliationReportRequest">
+     <wsdl:part element="impl:reconciliationReport" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="currencyRatesListRequest">
+     <wsdl:part element="impl:currencyRatesList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insuranceQuoteRequest">
+     <wsdl:part element="impl:insuranceQuote" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insuranceSellRequest">
+     <wsdl:part element="impl:insuranceSell" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="countryListRequest">
+     <wsdl:part element="impl:countryList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ssrDisplayRequest">
+     <wsdl:part element="impl:ssrDisplay" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="seatMapRequest">
+     <wsdl:part element="impl:seatMap" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  
+  <wsdl:message name="exchangeAvailabilityResponse">
+     <wsdl:part element="impl:exchangeAvailabilityResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+  
+
+  <wsdl:message name="bookingInfoRequest">
+     <wsdl:part element="impl:bookingInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="airportsListRequest">
+     <wsdl:part element="impl:airportsList" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="maxServiceFeeResponse">
+     <wsdl:part element="impl:maxServiceFeeResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="availabilityV3Request">
+     <wsdl:part element="impl:availabilityV3" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="availabilityV4Request">
+     <wsdl:part element="impl:availabilityV4" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="availLowFareRequest">
+     <wsdl:part element="impl:availLowFare" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="cancelPnrResponse">
+     <wsdl:part element="impl:cancelPnrResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="cancelPreBookingResponse">
+     <wsdl:part element="impl:cancelPreBookingResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+
+   <wsdl:message name="limitInfoRequest">
+     <wsdl:part element="impl:limitInfo" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="openJawAirportsListResponse">
+     <wsdl:part element="impl:openJawAirportsListResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="addPassengerV2Request">
+     <wsdl:part element="impl:addPassengerV2" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="addPassengerV3Request">
+     <wsdl:part element="impl:addPassengerV3" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+
+   <wsdl:message name="timetableRequest">
+     <wsdl:part element="impl:timetable" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="availabilityRequest">
+     <wsdl:part element="impl:availability" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="preBookingResponse">
+     <wsdl:part element="impl:preBookingResponse" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="openJawAirportsListRequest">
+     <wsdl:part element="impl:openJawAirportsList" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="faresRequest">
+     <wsdl:part element="impl:fares" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="addPassengerV2Response">
+     <wsdl:part element="impl:addPassengerV2Response" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="addPassengerV3Response">
+     <wsdl:part element="impl:addPassengerV3Response" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+
+   <wsdl:message name="cancelPnrRequest">
+     <wsdl:part element="impl:cancelPnr" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+
+   <wsdl:message name="cancelPreBookingRequest">
+     <wsdl:part element="impl:cancelPreBooking" name="parameters">
+    </wsdl:part>
+
+  </wsdl:message>
+  
+   <wsdl:message name="exchangeAvailabilityRequest">
+     <wsdl:part element="impl:exchangeAvailability" name="parameters">
+    </wsdl:part>
+  </wsdl:message>  
+
+   <wsdl:message name="exchangeStartSessionRequest">
+     <wsdl:part element="impl:exchangeStartSession" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="exchangeStartSessionResponse">
+     <wsdl:part element="impl:exchangeStartSessionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="exchangeEndSessionRequest">
+     <wsdl:part element="impl:exchangeEndSession" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="exchangeEndSessionResponse">
+     <wsdl:part element="impl:exchangeEndSessionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="exchangeChargesRequest">
+     <wsdl:part element="impl:exchangeCharges" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="exchangeChargesResponse">
+     <wsdl:part element="impl:exchangeChargesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="doExchangeRequest">
+     <wsdl:part element="impl:doExchange" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="doExchangeResponse">
+     <wsdl:part element="impl:doExchangeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="pnrAddSeatRequest">
+     <wsdl:part element="impl:pnrAddSeat" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+   <wsdl:message name="pnrAddSeatResponse">
+     <wsdl:part element="impl:pnrAddSeatResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+
+
+   <wsdl:portType name="Atlasjet">
+     <wsdl:operation name="availability">
+       <wsdl:input message="impl:availabilityRequest" name="availabilityRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:availabilityResponse" name="availabilityResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="availabilityV3">
+       <wsdl:input message="impl:availabilityV3Request" name="availabilityV3Request"/>
+       <wsdl:output message="impl:availabilityV3Response" name="availabilityV3Response"/>
+    </wsdl:operation>
+
+     <wsdl:operation name="availabilityV4">
+       <wsdl:input message="impl:availabilityV4Request" name="availabilityV4Request"/>
+       <wsdl:output message="impl:availabilityV4Response" name="availabilityV4Response"/>
+    </wsdl:operation>
+
+     <wsdl:operation name="availLowFare">
+       <wsdl:input message="impl:availLowFareRequest" name="availLowFareRequest"/>
+       <wsdl:output message="impl:availLowFareResponse" name="availLowFareResponse"/>
+    </wsdl:operation>
+
+     <wsdl:operation name="timetable">
+       <wsdl:input message="impl:timetableRequest" name="timetableRequest">
+    </wsdl:input>
+       <wsdl:output message="impl:timetableResponse" name="timetableResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+     <wsdl:operation name="fares">
+       <wsdl:input message="impl:faresRequest" name="faresRequest">
+    </wsdl:input>
+       <wsdl:output message="impl:faresResponse" name="faresResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+     <wsdl:operation name="cancelPnrPrice">
+       <wsdl:input message="impl:cancelPnrPriceRequest" name="cancelPnrPriceRequest">
+    </wsdl:input>
+       <wsdl:output message="impl:cancelPnrPriceResponse" name="cancelPnrPriceResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="psgrForTicketNumber">
+       <wsdl:input message="impl:psgrForTicketNumberRequest" name="psgrForTicketNumberRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:psgrForTicketNumberResponse" name="psgrForTicketNumberResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="addPassenger">
+       <wsdl:input message="impl:addPassengerRequest" name="addPassengerRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:addPassengerResponse" name="addPassengerResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="pnrDivide">
+       <wsdl:input message="impl:pnrDivideRequest" name="pnrDivideRequest">
+	   </wsdl:input>
+
+       <wsdl:output message="impl:pnrDivideResponse" name="pnrDivideResponse">
+       </wsdl:output>
+    </wsdl:operation>
+
+
+     <wsdl:operation name="cancelPnr">
+       <wsdl:input message="impl:cancelPnrRequest" name="cancelPnrRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:cancelPnrResponse" name="cancelPnrResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+    
+	<wsdl:operation name="recalculateTotalPrice">
+		<wsdl:input message="impl:recalculateTotalPriceRequest" name="recalculateTotalPriceRequest">
+		</wsdl:input>
+
+		<wsdl:output message="impl:recalculateTotalPriceResponse" name="recalculateTotalPriceResponse">
+		</wsdl:output>
+
+	</wsdl:operation>    
+
+     <wsdl:operation name="cancelPreBooking">
+       <wsdl:input message="impl:cancelPreBookingRequest" name="cancelPreBookingRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:cancelPreBookingResponse" name="cancelPreBookingResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+    
+     <wsdl:operation name="exchangeAvailability">
+       <wsdl:input message="impl:exchangeAvailabilityRequest" name="exchangeAvailabilityRequest"/>
+       <wsdl:output message="impl:exchangeAvailabilityResponse" name="exchangeAvailabilityResponse"/>
+     </wsdl:operation>
+
+     <wsdl:operation name="exchangeStartSession">
+       <wsdl:input message="impl:exchangeStartSessionRequest" name="exchangeStartSessionRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:exchangeStartSessionResponse" name="exchangeStartSessionResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="exchangeEndSession">
+       <wsdl:input message="impl:exchangeEndSessionRequest" name="exchangeEndSessionRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:exchangeEndSessionResponse" name="exchangeEndSessionResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+    
+    <wsdl:operation name="exchangeCharges">
+       <wsdl:input message="impl:exchangeChargesRequest" name="exchangeChargesRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:exchangeChargesResponse" name="exchangeChargesResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="doExchange">
+       <wsdl:input message="impl:doExchangeRequest" name="doExchangeRequest"/>
+       <wsdl:output message="impl:doExchangeResponse" name="doExchangeResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="pnrAddSeat">
+       <wsdl:input message="impl:pnrAddSeatRequest" name="pnrAddSeatRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:pnrAddSeatResponse" name="pnrAddSeatResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+
+     <wsdl:operation name="openJawAirportsList">
+       <wsdl:input message="impl:openJawAirportsListRequest" name="openJawAirportsListRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:openJawAirportsListResponse" name="openJawAirportsListResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="jetmilInfo">
+       <wsdl:input message="impl:jetmilInfoRequest" name="jetmilInfoRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:jetmilInfoResponse" name="jetmilInfoResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="specialTypeList">
+       <wsdl:input message="impl:specialTypeListRequest" name="specialTypeListRequest"/>
+       <wsdl:output message="impl:specialTypeListResponse" name="specialTypeListResponse"/>
+    </wsdl:operation>
+
+     <wsdl:operation name="ccList">
+       <wsdl:input message="impl:ccListRequest" name="ccListRequest"/>
+       <wsdl:output message="impl:ccListResponse" name="ccListResponse"/>
+    </wsdl:operation>
+    
+	<wsdl:operation name="campaignList">
+		<wsdl:input message="impl:campaignListRequest" name="campaignListRequest"/>
+		<wsdl:output message="impl:campaignListResponse" name="campaignListResponse"/>
+	</wsdl:operation>    
+
+	<wsdl:operation name="ccRecList">
+		<wsdl:input message="impl:ccRecListRequest" name="ccRecListRequest"/>
+		<wsdl:output message="impl:ccRecListResponse" name="ccRecListResponse"/>
+	</wsdl:operation>    
+    
+    <wsdl:operation name="reconciliationReport">
+       <wsdl:input message="impl:reconciliationReportRequest" name="reconciliationReportRequest"/>
+       <wsdl:output message="impl:reconciliationReportResponse" name="reconciliationReportResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="currencyRatesList">
+       <wsdl:input message="impl:currencyRatesListRequest" name="currencyRatesListRequest"/>
+       <wsdl:output message="impl:currencyRatesListResponse" name="currencyRatesListResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="insuranceQuote">
+       <wsdl:input message="impl:insuranceQuoteRequest" name="insuranceQuoteRequest"/>
+       <wsdl:output message="impl:insuranceQuoteResponse" name="insuranceQuoteResponse"/>
+    </wsdl:operation>
+    
+    <wsdl:operation name="insuranceSell">
+       <wsdl:input message="impl:insuranceSellRequest" name="insuranceSellRequest"/>
+       <wsdl:output message="impl:insuranceSellResponse" name="insuranceSellResponse"/>
+    </wsdl:operation>
+    
+    <wsdl:operation name="countryList">
+       <wsdl:input message="impl:countryListRequest" name="countryListRequest"/>
+       <wsdl:output message="impl:countryListResponse" name="countryListResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="ssrDisplay">
+       <wsdl:input message="impl:ssrDisplayRequest" name="ssrDisplayRequest"/>
+       <wsdl:output message="impl:ssrDisplayResponse" name="ssrDisplayResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="seatMap">
+       <wsdl:input message="impl:seatMapRequest" name="seatMapRequest"/>
+       <wsdl:output message="impl:seatMapResponse" name="seatMapResponse"/>
+    </wsdl:operation>
+
+	<wsdl:operation name="bookingInfo">
+       <wsdl:input message="impl:bookingInfoRequest" name="bookingInfoRequest"/>
+       <wsdl:output message="impl:bookingInfoResponse" name="bookingInfoResponse"/>
+    </wsdl:operation>
+
+     <wsdl:operation name="airportsList">
+       <wsdl:input message="impl:airportsListRequest" name="airportsListRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:airportsListResponse" name="airportsListResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="toAirportsList">
+       <wsdl:input message="impl:toAirportsListRequest" name="toAirportsListRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:toAirportsListResponse" name="toAirportsListResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="limitInfo">
+       <wsdl:input message="impl:limitInfoRequest" name="limitInfoRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:limitInfoResponse" name="limitInfoResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="addPassengerV2">
+       <wsdl:input message="impl:addPassengerV2Request" name="addPassengerV2Request">
+    </wsdl:input>
+
+       <wsdl:output message="impl:addPassengerV2Response" name="addPassengerV2Response">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="addPassengerV3">
+       <wsdl:input message="impl:addPassengerV3Request" name="addPassengerV3Request">
+    </wsdl:input>
+
+       <wsdl:output message="impl:addPassengerV3Response" name="addPassengerV3Response">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+
+     <wsdl:operation name="booking">
+       <wsdl:input message="impl:bookingRequest" name="bookingRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:bookingResponse" name="bookingResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="bookingCC">
+       <wsdl:input message="impl:bookingCCRequest" name="bookingCCRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:bookingCCResponse" name="bookingCCResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+
+     <wsdl:operation name="preBooking">
+       <wsdl:input message="impl:preBookingRequest" name="preBookingRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:preBookingResponse" name="preBookingResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="maxServiceFee">
+       <wsdl:input message="impl:maxServiceFeeRequest" name="maxServiceFeeRequest">
+    </wsdl:input>
+
+       <wsdl:output message="impl:maxServiceFeeResponse" name="maxServiceFeeResponse">
+    </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:portType>
+
+   <wsdl:binding name="AtlasjetSoapBinding" type="impl:Atlasjet">
+ <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsdl:required="false"/>
+
+     <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+     <wsdl:operation name="availability">
+       <wsdlsoap:operation soapAction="availability"/>
+
+       <wsdl:input name="availabilityRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="availabilityResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="availabilityV3">
+       <wsdlsoap:operation soapAction="availabilityV3"/>
+
+       <wsdl:input name="availabilityV3Request">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="availabilityV3Response">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="availabilityV4">
+       <wsdlsoap:operation soapAction="availabilityV4"/>
+
+       <wsdl:input name="availabilityV4Request">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="availabilityV4Response">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="availLowFare">
+       <wsdlsoap:operation soapAction="availLowFare"/>
+
+       <wsdl:input name="availLowFareRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="availLowFareResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+
+     <wsdl:operation name="timetable">
+       <wsdlsoap:operation soapAction="timetable"/>
+
+       <wsdl:input name="timetableRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="timetableResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="fares">
+       <wsdlsoap:operation soapAction="fares"/>
+
+       <wsdl:input name="faresRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="faresResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="cancelPnrPrice">
+       <wsdlsoap:operation soapAction="cancelPnrPrice"/>
+
+       <wsdl:input name="cancelPnrPriceRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="cancelPnrPriceResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="psgrForTicketNumber">
+       <wsdlsoap:operation soapAction="psgrForTicketNumber"/>
+
+       <wsdl:input name="psgrForTicketNumberRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="psgrForTicketNumberResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="addPassenger">
+       <wsdlsoap:operation soapAction="addPassenger"/>
+
+       <wsdl:input name="addPassengerRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="addPassengerResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="pnrDivide">
+       <wsdlsoap:operation soapAction="pnrDivide"/>
+
+       <wsdl:input name="pnrDivideRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="pnrDivideResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+
+     <wsdl:operation name="cancelPnr">
+       <wsdlsoap:operation soapAction="cancelPnr"/>
+
+       <wsdl:input name="cancelPnrRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="cancelPnrResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+	<wsdl:operation name="recalculateTotalPrice">
+		<wsdlsoap:operation soapAction="recalculateTotalPrice"/>
+
+		<wsdl:input name="recalculateTotalPriceRequest">
+			<wsdlsoap:body use="literal"/>
+
+		</wsdl:input>
+
+		<wsdl:output name="recalculateTotalPriceResponse">
+			<wsdlsoap:body use="literal"/>
+
+		</wsdl:output>
+
+	</wsdl:operation>
+    
+
+     <wsdl:operation name="cancelPreBooking">
+       <wsdlsoap:operation soapAction="cancelPreBooking"/>
+
+       <wsdl:input name="cancelPreBookingRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="cancelPreBookingResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="exchangeAvailability">
+       <wsdlsoap:operation soapAction="exchangeAvailability"/>
+
+       <wsdl:input name="exchangeAvailabilityRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="exchangeAvailabilityResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="exchangeStartSession">
+       <wsdlsoap:operation soapAction="exchangeStartSession"/>
+
+       <wsdl:input name="exchangeStartSessionRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="exchangeStartSessionResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="exchangeEndSession">
+       <wsdlsoap:operation soapAction="exchangeEndSession"/>
+
+       <wsdl:input name="exchangeEndSessionRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="exchangeEndSessionResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="exchangeCharges">
+       <wsdlsoap:operation soapAction="exchangeCharges"/>
+
+       <wsdl:input name="exchangeChargesRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="exchangeChargesResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="doExchange">
+       <wsdlsoap:operation soapAction="doExchange"/>
+
+       <wsdl:input name="doExchangeRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="doExchangeResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="pnrAddSeat">
+       <wsdlsoap:operation soapAction="pnrAddSeat"/>
+
+       <wsdl:input name="pnrAddSeatRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="pnrAddSeatResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+
+     <wsdl:operation name="openJawAirportsList">
+       <wsdlsoap:operation soapAction="openJawAirportsList"/>
+
+       <wsdl:input name="openJawAirportsListRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="openJawAirportsListResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="jetmilInfo">
+       <wsdlsoap:operation soapAction="jetmilInfo"/>
+
+       <wsdl:input name="jetmilInfoRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="jetmilInfoResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="specialTypeList">
+       <wsdlsoap:operation soapAction="specialTypeList"/>
+
+       <wsdl:input name="specialTypeListRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="specialTypeListResponse">
+         <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="ccList">
+       <wsdlsoap:operation soapAction="ccList"/>
+
+       <wsdl:input name="ccListRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="ccListResponse">
+         <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+
+    </wsdl:operation>
+    
+	<wsdl:operation name="campaignList">
+		<wsdlsoap:operation soapAction="campaignList"/>
+
+		<wsdl:input name="campaignListRequest">
+			<wsdlsoap:body use="literal"/>
+		</wsdl:input>
+
+		<wsdl:output name="campaignListResponse">
+			<wsdlsoap:body use="literal"/>
+		</wsdl:output>
+
+	</wsdl:operation>  
+
+	<wsdl:operation name="ccRecList">
+		<wsdlsoap:operation soapAction="ccRecList"/>
+
+		<wsdl:input name="ccRecListRequest">
+			<wsdlsoap:body use="literal"/>
+		</wsdl:input>
+
+		<wsdl:output name="ccRecListResponse">
+			<wsdlsoap:body use="literal"/>
+		</wsdl:output>
+
+	</wsdl:operation>  
+
+    
+    <wsdl:operation name="reconciliationReport">
+       <wsdlsoap:operation soapAction="reconciliationReport"/>
+
+       <wsdl:input name="reconciliationReportRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="reconciliationReportResponse">
+         <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+
+    </wsdl:operation>
+    <wsdl:operation name="currencyRatesList">
+       <wsdlsoap:operation soapAction="currencyRatesList"/>
+
+       <wsdl:input name="currencyRatesListRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="currencyRatesListResponse">
+         <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="insuranceQuote">
+       <wsdlsoap:operation soapAction="insuranceQuote"/>
+
+       <wsdl:input name="insuranceQuoteRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="insuranceQuoteResponse">
+         <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+
+    </wsdl:operation>
+    
+    
+    <wsdl:operation name="insuranceSell">
+       <wsdlsoap:operation soapAction="insuranceSell"/>
+
+       <wsdl:input name="insuranceSellRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="insuranceSellResponse">
+         <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="countryList">
+       <wsdlsoap:operation soapAction="countryList"/>
+
+       <wsdl:input name="countryListRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="countryListResponse">
+         <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="ssrDisplay">
+       <wsdlsoap:operation soapAction="ssrDisplay"/>
+
+       <wsdl:input name="ssrDisplayRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="ssrDisplayResponse">
+         <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    <wsdl:operation name="seatMap">
+       <wsdlsoap:operation soapAction="seatMap"/>
+
+       <wsdl:input name="seatMapRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="seatMapResponse">
+         <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+
+    </wsdl:operation>
+
+    
+    <wsdl:operation name="bookingInfo">
+       <wsdlsoap:operation soapAction="bookingInfo"/>
+
+       <wsdl:input name="bookingInfoRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="bookingInfoResponse">
+         <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+
+    </wsdl:operation>
+
+
+     <wsdl:operation name="airportsList">
+       <wsdlsoap:operation soapAction="airportsList"/>
+
+       <wsdl:input name="airportsListRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="airportsListResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="toAirportsList">
+       <wsdlsoap:operation soapAction="toAirportsList"/>
+
+       <wsdl:input name="toAirportsListRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="toAirportsListResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="limitInfo">
+       <wsdlsoap:operation soapAction="limitInfo"/>
+
+       <wsdl:input name="limitInfoRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="limitInfoResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="addPassengerV2">
+       <wsdlsoap:operation soapAction="addPassengerV2"/>
+
+       <wsdl:input name="addPassengerV2Request">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="addPassengerV2Response">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="addPassengerV3">
+       <wsdlsoap:operation soapAction="addPassengerV3"/>
+
+       <wsdl:input name="addPassengerV3Request">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="addPassengerV3Response">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+
+     <wsdl:operation name="booking">
+       <wsdlsoap:operation soapAction="booking"/>
+
+       <wsdl:input name="bookingRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="bookingResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+    </wsdl:operation>
+
+     <wsdl:operation name="bookingCC">
+       <wsdlsoap:operation soapAction="bookingCC"/>
+
+       <wsdl:input name="bookingCCRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="bookingCCResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+
+
+     <wsdl:operation name="preBooking">
+       <wsdlsoap:operation soapAction="preBooking"/>
+
+       <wsdl:input name="preBookingRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="preBookingResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+     <wsdl:operation name="maxServiceFee">
+       <wsdlsoap:operation soapAction="maxServiceFee"/>
+
+       <wsdl:input name="maxServiceFeeRequest">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:input>
+
+       <wsdl:output name="maxServiceFeeResponse">
+         <wsdlsoap:body use="literal"/>
+
+      </wsdl:output>
+
+    </wsdl:operation>
+
+  </wsdl:binding>
+
+   <wsdl:service name="AtlasjetService">
+     <wsdl:port binding="impl:AtlasjetSoapBinding" name="Atlasjet">
+      <wsdlsoap:address location="http://91.230.73.120/ADSAGENCYWS/services/Atlasjet"/>
+    </wsdl:port>
+
+  </wsdl:service>
+
+</wsdl:definitions>
